@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-white font-custom font-bold text-dark-gray antialiased;
+  @apply bg-white font-custom text-dark-gray antialiased;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 #app {
-  @apply max-w-screen-xl m-auto p-6 md:p-10 md:pt-29px  lg:p-10;
+  @apply max-w-[1440px] m-auto p-6 md:p-10 md:pt-29px  lg:p-10;
 }
 
 @layer base {
@@ -27,6 +27,9 @@ body {
   p {
     @apply text-xl;
   }
+  small {
+    @apply text-lg text-black;
+  }
   header {
     @apply flex justify-between border-b border-light-gray pb-23px md:pb-27px  lg:pb-10;
   }
@@ -34,7 +37,7 @@ body {
 
 @layer components {
   .btn {
-    @apply uppercase;
+    @apply uppercase font-bold;
   }
   .btn1 {
     @apply text-base text-dark-gray tracking-widest hover:text-black;
@@ -51,10 +54,39 @@ body {
   @apply text-9xl text-light-gray;
 }
 
-.subhead1 {
+.subhead {
   @apply text-2xl text-black font-normal;
 }
 
-.subhead2 {
-  @apply text-lg text-black;
+.gallery {
+  @apply mt-6 sm:mt-10;
+}
+
+.card {
+  @apply relative w-fit h-fit;
+}
+
+.foreground {
+  @apply absolute bottom-0 top-1/2 left-0 right-0 bg-gradient-to-b from-transparent to-black px-9;
+}
+
+.content-container {
+  @apply absolute bottom-8;
+}
+
+.content-container > h2 {
+  @apply text-white;
+}
+
+.content-container > small {
+  @apply text-white opacity-75;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 1500px;
+  width: 1360px;
+  gap: 40px;
 }
