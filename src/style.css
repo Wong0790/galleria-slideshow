@@ -90,3 +90,7 @@ body {
   width: 1360px;
   gap: 40px;
 }
+
+.gallery img {
+  width: 310px;
+}
