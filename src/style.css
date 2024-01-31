@@ -83,14 +83,40 @@ body {
 }
 
 .gallery {
-  display: flex;
+  @apply mx-auto flex items-center gap-10 h-1325;
+}
+
+.card {
+  @apply w-fit max-w-310;
+}
+
+.gallery {
   flex-flow: column wrap;
-  align-items: center;
-  height: 1500px;
-  width: 1360px;
-  gap: 40px;
+  @media (max-width: 1440px) {
+    gap: 2.5rem;
+    height: 162.8125rem;
+    width: 41.5rem;
+  }
+  @media (max-width: 720px) {
+    gap: 1.5rem;
+    flex-flow: row wrap;
+    height: fit-content;
+    width: 100%;
+    max-width: 18.75rem;
+  }
+}
+
+.card {
+  @media (max-width: 1440px) {
+    width: 45%;
+    max-width: 20.25rem;
+  }
+  @media (max-width: 720px) {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .gallery img {
-  width: 310px;
+  width: 100%;
 }

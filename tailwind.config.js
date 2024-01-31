@@ -36,6 +36,12 @@ export default {
         "27px": "27px",
         "23px": "23px",
       },
+      height: {
+        1325: "82.8125rem",
+      },
+      maxWidth: {
+        310: "19.375rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
