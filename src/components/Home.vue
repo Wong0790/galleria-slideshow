@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import LogoIcon from "@icons/LogoIcon.vue";
 import GalleryCard from "@components/GalleryCard.vue";
 import { paintings } from "../data/app-data";
 import { useWindowSize } from "@vueuse/core";
@@ -33,7 +32,7 @@ const arrangedPaintings = computed(() =>
       :src="painting.images.thumbnail"
       :alt="painting.name"
       :title="painting.name"
-      :artist="painting.artist.name"
+      :artist="painting.artist"
       @click="
         $router.push({ name: 'Painting', params: { name: painting.name } })
       "

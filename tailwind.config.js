@@ -36,11 +36,22 @@ export default {
         "27px": "27px",
         "23px": "23px",
       },
+      margin: {
+        "100px": "6.25rem",
+      },
+      inset: {
+        "410px": "25.625rem",
+      },
       height: {
         1325: "82.8125rem",
       },
       maxWidth: {
+        445: "27.8125rem",
+        350: "21.875rem",
         310: "19.375rem",
+      },
+      maxHeight: {
+        235: "14.6865rem",
       },
     },
   },

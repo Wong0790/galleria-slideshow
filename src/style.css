@@ -58,6 +58,8 @@ body {
   @apply text-2xl text-black font-normal;
 }
 
+/** Hone Styles **/
+
 .gallery {
   @apply mt-6 sm:mt-10 mx-auto flex items-center gap-10 h-1325;
 }
@@ -71,7 +73,7 @@ body {
 }
 
 .foreground {
-  @apply absolute bottom-0 top-1/2 left-0 right-0 bg-gradient-to-b from-transparent to-black px-9;
+  @apply absolute bottom-0 top-1/2 left-0 right-0 px-9 bg-gradient-to-b from-transparent to-black;
 }
 
 .content-container {
@@ -111,4 +113,25 @@ body {
     width: 100%;
     max-width: none;
   }
+}
+
+/** Painting Styles **/
+.painting {
+  @apply my-100px flex;
+}
+
+.picture-container {
+  @apply relative;
+}
+
+.picture-title {
+  @apply bg-white max-w-445 w-full max-h-235 h-full pl-16 absolute top-0 left-410px;
+}
+
+.picture-title h1 {
+  @apply max-w-350 font-bold;
+}
+
+.picture-title p {
+  @apply mt-6 text-dark-gray;
 }
