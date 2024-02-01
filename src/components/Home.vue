@@ -27,19 +27,21 @@ const handlePaintingClick = (name: string) => {
 </script>
 
 <template>
-  <header>
-    <LogoIcon />
-    <button class="btn btn1">Start slideshow</button>
-  </header>
-  <section class="gallery">
-    <GalleryCard
-      v-for="(painting, index) in arrangedPaintings"
-      :key="index"
-      :src="painting.images.thumbnail"
-      :alt="painting.name"
-      :title="painting.name"
-      :artist="painting.artist"
-      @click="handlePaintingClick(painting.name)"
-    />
-  </section>
+  <div class="main-container">
+    <header>
+      <LogoIcon />
+      <button class="btn btn1">Start slideshow</button>
+    </header>
+    <section class="gallery">
+      <GalleryCard
+        v-for="(painting, index) in arrangedPaintings"
+        :key="index"
+        :src="painting.images.thumbnail"
+        :alt="painting.name"
+        :title="painting.name"
+        :artist="painting.artist"
+        @click="handlePaintingClick(painting.name)"
+      />
+    </section>
+  </div>
 </template>

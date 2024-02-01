@@ -39,7 +39,6 @@ export default {
       },
       margin: {
         "100px": "6.25rem",
-        "75px": "4.6875rem",
       },
       inset: {
         "410px": "25.625rem",
@@ -47,6 +46,7 @@ export default {
       height: {
         1325: "82.8125rem",
         510: "31.875rem",
+        2: "2px",
       },
       maxWidth: {
         450: "28.125rem",
@@ -54,6 +54,7 @@ export default {
         360: "22.5rem",
         350: "21.875rem",
         310: "19.375rem",
+        230: "14.375rem",
       },
       maxHeight: {
         302: "18.875rem",

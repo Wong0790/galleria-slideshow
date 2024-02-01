@@ -11,7 +11,7 @@ body {
 }
 
 #app {
-  @apply max-w-[1440px] m-auto p-6 md:p-10 md:pt-29px lg:p-10;
+  @apply max-w-[1440px] m-auto;
 }
 
 @layer base {
@@ -36,7 +36,7 @@ body {
     @apply text-lg text-black;
   }
   header {
-    @apply flex justify-between border-b border-light-gray pb-23px md:pb-27px  lg:pb-10;
+    @apply flex justify-between border-b border-light-gray pb-23px md:pb-27px lg:pb-10;
   }
 }
 
@@ -68,6 +68,10 @@ body {
 
 .subhead {
   @apply text-2xl text-black font-normal;
+}
+
+.main-container {
+  @apply p-6 md:p-10 md:pt-29px lg:p-10;
 }
 
 /** Hone Styles **/
@@ -127,7 +131,7 @@ body {
 
 /** Painting Styles **/
 .slide {
-  @apply mt-100px mb-75px flex flex-row items-center gap-30 justify-between;
+  @apply mt-100px mb-14 flex flex-row items-center gap-30 justify-between;
 
   @media (max-width: 1445px) {
     flex-direction: column;
@@ -244,4 +248,31 @@ body {
 
 .full-size-picture {
   @apply fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-85 z-20 px-6 md:px-12;
+}
+
+.slide-footer {
+  @apply flex items-center justify-between px-6 py-4 sm:px-10 sm:py-6 gap-2 sm:gap-4;
+}
+
+.progress-bar {
+  @apply w-full h-2 bg-light-gray overflow-hidden;
+}
+
+.footer-info {
+  @apply max-w-230 sm:max-w-none;
+}
+
+.footer-btns {
+  @apply flex gap-2 sm:gap-10;
+}
+
+.footer-info h3 {
+  @apply font-bold mb-1;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  transition: width 0.1s linear;
 }

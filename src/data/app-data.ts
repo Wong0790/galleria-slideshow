@@ -6,7 +6,7 @@ export interface Painting {
   source: string;
   artist: string;
   style: string;
-  images: {
+  images?: {
     thumbnail: string;
     small: string;
     large: string;
