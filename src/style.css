@@ -7,16 +7,21 @@
 }
 
 body {
-  @apply min-h-full;
+  @apply min-h-full relative;
 }
 
 #app {
-  @apply max-w-[1440px] m-auto p-6 md:p-10 md:pt-29px  lg:p-10;
+  @apply max-w-[1440px] m-auto p-6 md:p-10 md:pt-29px lg:p-10;
 }
 
 @layer base {
   h1 {
     @apply text-6xl text-black;
+
+    @media (max-width: 720px) {
+      font-size: 1.5rem;
+      line-height: 29px;
+    }
   }
   h2 {
     @apply text-4xl text-black;
@@ -40,18 +45,25 @@ body {
     @apply uppercase font-bold;
   }
   .btn1 {
-    @apply text-base text-dark-gray tracking-widest hover:text-black;
+    @apply text-base text-dark-gray tracking-widest;
   }
   .btn2 {
     @apply text-xs text-dark-gray tracking-wide border-b border-dark-gray hover:text-black hover:border-black;
   }
   .btn3 {
-    @apply bg-black backdrop-opacity-75 backdrop-invert bg-white/30 text-sm text-white tracking-wider;
+    @apply flex gap-4 bg-black bg-opacity-75 text-sm text-white tracking-wider px-4 py-14px hover:bg-gray-700 hover:bg-opacity-50;
   }
 }
 
 .display-text {
   @apply text-9xl text-light-gray;
+
+  @media (max-width: 720px) {
+    font-size: 6.25rem;
+    line-height: 6.25rem;
+    width: fit-content;
+    margin-left: auto;
+  }
 }
 
 .subhead {
@@ -70,6 +82,15 @@ body {
 
 .card {
   @apply relative w-fit h-fit max-w-310 hover:cursor-pointer;
+
+  @media (max-width: 1440px) {
+    width: 45%;
+    max-width: 20.25rem;
+  }
+  @media (max-width: 720px) {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .foreground {
@@ -81,7 +102,7 @@ body {
 }
 
 .content-container > h2 {
-  @apply text-white;
+  @apply text-white w-5/6;
 }
 
 .content-container > small {
@@ -104,34 +125,123 @@ body {
   }
 }
 
-.card {
-  @media (max-width: 1440px) {
-    width: 45%;
-    max-width: 20.25rem;
-  }
-  @media (max-width: 720px) {
-    width: 100%;
-    max-width: none;
+/** Painting Styles **/
+.slide {
+  @apply mt-100px mb-75px flex flex-row items-center gap-30 justify-between;
+
+  @media (max-width: 1445px) {
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 4rem;
   }
 }
 
-/** Painting Styles **/
-.painting {
-  @apply my-100px flex;
+.left-container {
+  @apply flex gap-30 min-h-624;
+
+  @media (max-width: 1445px) {
+    min-height: max-content;
+  }
+  @media (max-width: 720px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.right-container {
+  @apply flex flex-col justify-between h-510;
+
+  @media (max-width: 1445px) {
+    height: 360px;
+  }
+  @media (max-width: 720px) {
+    height: fit-content;
+  }
+}
+.right-container a {
+  @apply w-fit;
+
+  @media (max-width: 1445px) {
+    margin-left: 7.1875rem;
+  }
+  @media (max-width: 720px) {
+    margin-top: 2.5rem;
+  }
 }
 
 .picture-container {
+  @apply relative mb-auto z-10;
+}
+
+.picture-container img {
   @apply relative;
 }
 
+.picture-container button {
+  @apply absolute bottom-4 left-4;
+
+  @media (max-width: 720px) {
+    top: 1rem;
+    bottom: auto;
+  }
+}
+
 .picture-title {
-  @apply bg-white max-w-445 w-full max-h-235 h-full pl-16 absolute top-0 left-410px;
+  @apply bg-white w-full h-full pl-16 absolute -top-[1px] left-410px;
+
+  @media (max-width: 1445px) {
+    left: 15.1875rem;
+  }
+  @media (max-width: 720px) {
+    position: relative;
+    left: -1px;
+    padding: 1.5rem;
+    margin-top: -50px;
+    max-width: 280px;
+  }
 }
 
 .picture-title h1 {
-  @apply max-w-350 font-bold;
+  @apply w-fit font-bold;
 }
 
 .picture-title p {
-  @apply mt-6 text-dark-gray;
+  @apply text-dark-gray mt-6;
+
+  @media (max-width: 720px) {
+    margin-top: 0.5rem;
+  }
+}
+
+.description-container {
+  @apply -mt-14;
+
+  @media (max-width: 1445px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 720px) {
+    margin-top: -5.5rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.description-container p {
+  @apply max-w-350 -mt-8;
+
+  @media (max-width: 1445px) {
+    max-width: 28.5625rem;
+    margin-top: -5.6225rem;
+    margin-left: 7.1875rem;
+  }
+  @media (max-width: 720px) {
+    margin-left: 0;
+    margin-top: -2rem;
+  }
+}
+
+.full-size-picture {
+  @apply fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-85 z-20 px-6 md:px-12;
 }

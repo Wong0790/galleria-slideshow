@@ -22,6 +22,9 @@ const router = createRouter({
       name: "Painting",
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 
 const app = createApp(App);

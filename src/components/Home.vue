@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import GalleryCard from "@components/GalleryCard.vue";
-import { paintings } from "../data/app-data";
+import { paintings, Painting } from "../data/app-data";
 import { useWindowSize } from "@vueuse/core";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const { width } = useWindowSize();
-const paintingsCopy = ref([...paintings]);
+const paintingsCopy = ref<Painting[]>([...paintings]);
 
 const index = computed(() =>
   width.value <= 720 ? 2 : width.value <= 1440 ? 1 : 0
@@ -18,6 +20,10 @@ const arrangedPaintings = computed(() =>
     return orderA < orderB ? -1 : 1;
   })
 );
+
+const handlePaintingClick = (name: string) => {
+  router.push({ name: "Painting", params: { name } });
+};
 </script>
 
 <template>
@@ -33,9 +39,7 @@ const arrangedPaintings = computed(() =>
       :alt="painting.name"
       :title="painting.name"
       :artist="painting.artist"
-      @click="
-        $router.push({ name: 'Painting', params: { name: painting.name } })
-      "
+      @click="handlePaintingClick(painting.name)"
     />
   </section>
 </template>
