@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import GalleryCard from "@components/GalleryCard.vue";
-import { paintings, Painting } from "../data/app-data";
+import SocialItem from "@components/SocialItem.vue";
+import { paintings, Painting, socials } from "../data/app-data";
 import { useWindowSize } from "@vueuse/core";
 import { useRouter } from "vue-router";
 
@@ -21,6 +22,10 @@ const arrangedPaintings = computed(() =>
   })
 );
 
+const startSlideShow = () => {
+  router.push({ name: "Painting", params: { name: "Starry Night" } });
+};
+
 const handlePaintingClick = (name: string) => {
   router.push({ name: "Painting", params: { name } });
 };
@@ -30,7 +35,7 @@ const handlePaintingClick = (name: string) => {
   <div class="main-container">
     <header>
       <LogoIcon />
-      <button class="btn btn1">Start slideshow</button>
+      <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
     </header>
     <section class="gallery">
       <GalleryCard
@@ -43,5 +48,26 @@ const handlePaintingClick = (name: string) => {
         @click="handlePaintingClick(painting.name)"
       />
     </section>
+    <footer class="mt-4 lg:mt-10">
+      <div class="text-center mt-16">
+        <ul class="social-icons">
+          <li v-for="social in socials" :key="social.name" class="group">
+            <SocialItem :url="social.url" :aria="social.aria">
+              <component :is="social.name"></component
+            ></SocialItem>
+          </li>
+        </ul>
+        <span class="font-semibold text-black">
+          &copy;2024
+          <a
+            href="https://wong0790-dev-profolio.netlify.app"
+            target="_blank"
+            class="hover:text-dark-gray"
+          >
+            Anneris E. Wong Jorge
+          </a>
+        </span>
+      </div>
+    </footer>
   </div>
 </template>

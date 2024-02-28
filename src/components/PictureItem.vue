@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 defineEmits(["openFullSizeImage"]);
 defineProps({
+  name: String,
   imageLarge: String,
   imageSmall: String,
 });
@@ -15,7 +16,12 @@ defineProps({
         width="327"
         height="280"
       />
-      <img :src="imageLarge" alt="alt" width="475" height="560" />
+      <img
+        :src="imageLarge"
+        :alt="`${name} painting`"
+        width="475"
+        height="560"
+      />
     </picture>
     <button class="btn btn3" @click="$emit('openFullSizeImage')">
       <img

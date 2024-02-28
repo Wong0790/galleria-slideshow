@@ -7,6 +7,9 @@ import LogoIcon from "@icons/LogoIcon.vue";
 import "@fontsource/libre-baskerville";
 import "@fontsource/libre-baskerville/700.css";
 import { createRouter, createWebHistory } from "vue-router";
+import LinkedInIcon from "@icons/LinkedInIcon.vue";
+import GithubIcon from "@icons/GithubIcon.vue";
+import FrontendMentorIcon from "@icons/FrontendMentorIcon.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,6 +32,10 @@ const router = createRouter({
 
 const app = createApp(App);
 
-app.component("LogoIcon", LogoIcon);
+app
+  .component("LogoIcon", LogoIcon)
+  .component("LinkedInIcon", LinkedInIcon)
+  .component("GithubIcon", GithubIcon)
+  .component("FrontendMentorIcon", FrontendMentorIcon);
 
 app.use(router).mount("#app");

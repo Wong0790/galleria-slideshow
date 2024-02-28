@@ -45,7 +45,7 @@ body {
     @apply uppercase font-bold;
   }
   .btn1 {
-    @apply text-base text-dark-gray tracking-widest;
+    @apply text-base text-dark-gray tracking-widest hover:text-black;
   }
   .btn2 {
     @apply text-xs text-dark-gray tracking-wide border-b border-dark-gray hover:text-black hover:border-black;
@@ -275,4 +275,8 @@ body {
   height: 100%;
   background-color: #000;
   transition: width 0.1s linear;
+}
+
+.social-icons {
+  @apply flex gap-3 items-center justify-center my-4;
 }

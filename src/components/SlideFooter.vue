@@ -1,11 +1,19 @@
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onBeforeUnmount, ref, watch } from "vue";
+import BackArrow from "./icons/BackArrow.vue";
+import NextArrow from "./icons/NextArrow.vue";
 
-defineProps({
+const emit = defineEmits(["changeSlide"]);
+const props = defineProps({
   name: String,
   artist: String,
+  stop: {
+    type: Boolean,
+    default: false,
+  },
 });
 
+let timer = ref(6000);
 const progress = ref<HTMLElement | null>(null);
 
 const startProgress = () => {
@@ -16,17 +24,38 @@ const startProgress = () => {
   const interval = 100;
   const steps = (0.5 * 60 * 1000) / interval;
 
-  const timer = setInterval(() => {
+  timer.value = setInterval(() => {
     width += 100 / steps;
     progressBar.style.width = `${width}%`;
     if (width >= 100) {
-      clearInterval(timer);
+      clearInterval(timer.value);
+      changeSlide(1);
     }
   }, interval);
 };
 
+const changeSlide = (index: number) => {
+  emit("changeSlide", index);
+  clearInterval(timer.value);
+  startProgress();
+};
+
+watch(
+  () => props.stop,
+  (newValue) => {
+    if (newValue) {
+      clearInterval(timer.value);
+    }
+  },
+  { deep: true }
+);
+
 onMounted(() => {
   startProgress();
+});
+
+onBeforeUnmount(() => {
+  clearInterval(timer.value);
 });
 </script>
 
@@ -41,24 +70,8 @@ onMounted(() => {
         <small>{{ artist }}</small>
       </div>
       <div class="footer-btns">
-        <button>
-          <img
-            src="@assets/shared/icon-back-button.svg"
-            alt="Navigate Back Arrow"
-            role="img"
-            width="26"
-            height="24"
-          />
-        </button>
-        <button>
-          <img
-            src="@assets/shared/icon-next-button.svg"
-            alt="Navigate Next Arrow"
-            role="img"
-            width="26"
-            height="24"
-          />
-        </button>
+        <BackArrow @click="changeSlide(0)" />
+        <NextArrow @click="changeSlide(1)" />
       </div>
     </div>
   </section>

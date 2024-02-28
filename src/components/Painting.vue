@@ -1,41 +1,73 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { paintings } from "../data/app-data";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import FullSizeImage from "./FullSizeImage.vue";
 import PictureItem from "./PictureItem.vue";
 import SlideFooter from "./SlideFooter.vue";
 
-const show = ref(false);
+const router = useRouter();
 const currentRoute = useRoute();
-const item = ref(paintings.find((x) => x.name === currentRoute.params.name));
 
-const el = ref(null);
-const title = ref(null);
+const show = ref(false);
+const el = ref<HTMLElement | null>(null);
+const title = ref<HTMLElement | null>(null);
+
+const stopSlideshow = ref(false);
+
 const { height } = useElementSize(title);
 const { width } = useElementSize(el);
 
+const item = computed(() =>
+  paintings.find((x) => x.name === currentRoute.params.name)
+);
+const itemIndex = computed(() =>
+  paintings.findIndex((x) => x.name === currentRoute.params.name)
+);
 const isWider = computed(() => width.value > 1349);
 const isSmaller = computed(() => width.value < 656);
 
 const hideScroll = () => (document.body.style.overflow = "hidden");
 const showScroll = () => (document.body.style.overflow = "auto");
+
+const changeSlide = (index: number) => {
+  show.value = false;
+  stopSlideshow.value = false;
+  showScroll();
+  if (itemIndex.value < 14 || index === 0) {
+    const painting =
+      index === 0
+        ? paintings[itemIndex.value - 1]
+        : paintings[itemIndex.value + 1];
+    router.push({
+      name: "Painting",
+      params: { name: painting.name },
+    });
+  } else {
+    router.push({
+      name: "Home",
+    });
+  }
+};
 </script>
 
 <template>
   <div class="main-container" style="padding-bottom: 0">
     <header>
       <LogoIcon />
-      <button class="btn btn1">Stop slideshow</button>
+      <button class="btn btn1" @click="stopSlideshow = true">
+        Stop slideshow
+      </button>
     </header>
     <section class="slide" ref="el">
       <div class="left-container">
         <div class="picture-container">
           <PictureItem
+            :name="item?.name"
             :imageLarge="item?.images?.large"
             :imageSmall="item?.images?.small"
-            @openFullSizeImage="
+            @open-full-size-image="
               show = true;
               hideScroll();
             "
@@ -47,7 +79,7 @@ const showScroll = () => (document.body.style.overflow = "auto");
         </div>
         <img
           :src="item?.images?.artist"
-          alt="alt"
+          :alt="`${item?.artist} picture`"
           :width="isSmaller ? '64' : '128'"
           :height="isSmaller ? '64' : '128'"
           class="h-fit"
@@ -71,11 +103,16 @@ const showScroll = () => (document.body.style.overflow = "auto");
       </div>
     </section>
   </div>
-  <SlideFooter :name="item?.name" :artist="item?.artist" />
+  <SlideFooter
+    :name="item?.name"
+    :artist="item?.artist"
+    :stop="stopSlideshow"
+    @change-slide="changeSlide"
+  />
   <FullSizeImage
     :show="show"
     :image="item?.images?.gallery"
-    @closeFullSizeImage="
+    @close-full-size-image="
       show = false;
       showScroll();
     "
