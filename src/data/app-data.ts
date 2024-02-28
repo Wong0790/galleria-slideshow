@@ -15,6 +15,12 @@ export interface Painting {
   };
 }
 
+export interface Social {
+  url: string;
+  name: string;
+  aria: string;
+}
+
 export const paintings: Painting[] = [
   {
     name: "Starry Night",
