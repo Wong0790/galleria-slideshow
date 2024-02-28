@@ -25,7 +25,7 @@ const router = createRouter({
       name: "Painting",
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { top: 0 };
   },
 });
