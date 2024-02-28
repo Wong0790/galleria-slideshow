@@ -218,7 +218,9 @@ async function importImages(index: number): Promise<{
   };
 }
 
-for (let i = 0; i < 15; i++) {
-  const images = await importImages(i);
-  paintings[i].images = images;
-}
+(async () => {
+  for (let i = 0; i < 15; i++) {
+    const images = await importImages(i);
+    paintings[i].images = images;
+  }
+})();
