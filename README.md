@@ -17,10 +17,6 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
     - [Setup](#setup)
     - [Development Server](#development-server)
     - [Production](#production)
-- [npm](#npm)
-- [pnpm](#pnpm)
-- [yarn](#yarn)
-- [bun](#bun)
 
 ## Overview
 

@@ -41,7 +41,7 @@ const handlePaintingClick = (name: string) => {
       <GalleryCard
         v-for="(painting, index) in arrangedPaintings"
         :key="index"
-        :src="painting.images.thumbnail"
+        :src="painting?.images?.thumbnail"
         :alt="painting.name"
         :title="painting.name"
         :artist="painting.artist"
