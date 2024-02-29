@@ -38,7 +38,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="main-container">
+  <main class="main-container">
     <header>
       <LogoIcon />
       <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
@@ -81,5 +81,5 @@ onMounted(async () => {
         </span>
       </div>
     </footer>
-  </div>
+  </main>
 </template>
