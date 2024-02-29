@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
+import { onMounted, ref, computed } from "vue";
 import GalleryCard from "@components/GalleryCard.vue";
 import SocialItem from "@components/SocialItem.vue";
-import { paintings, Painting, socials } from "@data/app-data";
+import { loadImages, paintings, Painting, socials } from "@data/app-data";
 import { useWindowSize } from "@vueuse/core";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const imagesLoaded = ref(false);
 const { width } = useWindowSize();
 const paintingsCopy = ref<Painting[]>([...paintings]);
 
@@ -29,6 +30,13 @@ const startSlideShow = () => {
 const handlePaintingClick = (name: string) => {
   router.push({ name: "Painting", params: { name } });
 };
+
+onMounted(() => {
+  loadImages();
+  setTimeout(() => {
+    imagesLoaded.value = true;
+  }, 50);
+});
 </script>
 
 <template>
@@ -37,7 +45,7 @@ const handlePaintingClick = (name: string) => {
       <LogoIcon />
       <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
     </header>
-    <section class="gallery">
+    <section class="gallery" v-if="imagesLoaded">
       <GalleryCard
         v-for="(painting, index) in arrangedPaintings"
         :key="index"

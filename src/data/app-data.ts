@@ -218,11 +218,6 @@ async function importImages(index: number): Promise<{
   };
 }
 
-/* for (let i = 0; i < 15; i++) {
-  const images = await importImages(i);
-  paintings[i].images = images;
-} */
-
 export async function loadImages() {
   for (let i = 0; i < 15; i++) {
     const images = await importImages(i);
