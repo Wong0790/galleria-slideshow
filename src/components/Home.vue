@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, ref, computed } from "vue";
+import { ScalingSquaresSpinner } from "epic-spinners";
 import GalleryCard from "@components/GalleryCard.vue";
 import SocialItem from "@components/SocialItem.vue";
 import { loadImages, paintings, Painting, socials } from "@data/app-data";
@@ -43,7 +44,14 @@ onMounted(async () => {
       <LogoIcon />
       <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
     </header>
-    <section class="gallery" v-if="imagesLoaded">
+    <scaling-squares-spinner
+      :animation-duration="1250"
+      :size="200"
+      :color="'#000'"
+      v-if="!imagesLoaded"
+      class="mx-auto mt-14"
+    />
+    <section class="gallery" v-else>
       <GalleryCard
         v-for="(painting, index) in arrangedPaintings"
         :key="index"
