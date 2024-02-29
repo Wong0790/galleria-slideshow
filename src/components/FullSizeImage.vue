@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 defineEmits(["closeFullSizeImage"]);
 defineProps({
+  name: String,
   show: Boolean,
   image: String,
 });
@@ -16,7 +17,12 @@ defineProps({
         >
           Close
         </button>
-        <img :src="image" alt="alt" />
+        <img
+          :src="image"
+          :alt="`${name} painting`"
+          width="auto"
+          height="auto"
+        />
       </div>
     </div>
   </section>

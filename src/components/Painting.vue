@@ -121,6 +121,7 @@ onMounted(async () => {
     @change-slide="changeSlide"
   />
   <FullSizeImage
+    :name="item?.name"
     :show="show"
     :image="item?.images?.gallery"
     @close-full-size-image="
