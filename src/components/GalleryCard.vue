@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="card">
-    <img :src="src" :alt="alt" />
+    <img :src="src" :alt="alt" loading="lazy" decoding="async" />
     <div class="foreground">
       <div class="content-container">
         <h2>{{ title }}</h2>
