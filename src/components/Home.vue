@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import GalleryCard from "@components/GalleryCard.vue";
 import SocialItem from "@components/SocialItem.vue";
-import { paintings, Painting, socials } from "../data/app-data";
+import { paintings, Painting, socials } from "@data/app-data";
 import { useWindowSize } from "@vueuse/core";
 import { useRouter } from "vue-router";
 

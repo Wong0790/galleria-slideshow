@@ -13,6 +13,7 @@ export default defineConfig({
       "@assets": "/src/assets",
       "@components": "/src/components",
       "@icons": "/src/components/icons",
+      "@data": "/src/data",
     },
   },
 });

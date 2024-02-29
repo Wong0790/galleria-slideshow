@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import { paintings } from "../data/app-data";
+import { paintings } from "@data/app-data";
 import { useRoute, useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import FullSizeImage from "./FullSizeImage.vue";
