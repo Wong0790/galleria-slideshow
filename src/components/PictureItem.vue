@@ -10,12 +10,7 @@ defineProps({
 <template>
   <div>
     <picture>
-      <source
-        :srcset="imageSmall"
-        media="(max-width: 720px)"
-        width="327"
-        height="280"
-      />
+      <source :srcset="imageSmall" media="(max-width: 720px)" />
       <img
         :src="imageLarge"
         :alt="`${name} painting`"

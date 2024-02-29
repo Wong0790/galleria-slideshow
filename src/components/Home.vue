@@ -34,6 +34,7 @@ const handlePaintingClick = (name: string) => {
 onMounted(async () => {
   await loadImages();
   imagesLoaded.value = true;
+  localStorage.setItem("once", "1");
 });
 </script>
 

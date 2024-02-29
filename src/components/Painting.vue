@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-import { paintings } from "@data/app-data";
+import { onMounted, ref, computed } from "vue";
+import { loadImages, paintings } from "@data/app-data";
 import { useRoute, useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import FullSizeImage from "./FullSizeImage.vue";
@@ -11,6 +11,7 @@ const router = useRouter();
 const currentRoute = useRoute();
 
 const show = ref(false);
+const imagesLoaded = ref(false);
 const el = ref<HTMLElement | null>(null);
 const title = ref<HTMLElement | null>(null);
 
@@ -50,10 +51,20 @@ const changeSlide = (index: number) => {
     });
   }
 };
+
+onMounted(async () => {
+  if (!item.hasOwnProperty("images")) {
+    await loadImages();
+    imagesLoaded.value = true;
+    localStorage.setItem("once", "1");
+  } else {
+    imagesLoaded.value = true;
+  }
+});
 </script>
 
 <template>
-  <div class="main-container" style="padding-bottom: 0">
+  <div class="main-container" style="padding-bottom: 0" v-if="imagesLoaded">
     <header>
       <LogoIcon />
       <button class="btn btn1" @click="stopSlideshow = true">
