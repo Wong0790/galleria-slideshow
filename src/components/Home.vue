@@ -35,7 +35,7 @@ onMounted(() => {
   loadImages();
   setTimeout(() => {
     imagesLoaded.value = true;
-  }, 50);
+  }, 200);
 });
 </script>
 
