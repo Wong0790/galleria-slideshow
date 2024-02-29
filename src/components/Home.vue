@@ -31,11 +31,9 @@ const handlePaintingClick = (name: string) => {
   router.push({ name: "Painting", params: { name } });
 };
 
-onMounted(() => {
-  loadImages();
-  setTimeout(() => {
-    imagesLoaded.value = true;
-  }, 1000);
+onMounted(async () => {
+  await loadImages();
+  imagesLoaded.value = true;
 });
 </script>
 
