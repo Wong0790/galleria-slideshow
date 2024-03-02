@@ -1,3 +1,93 @@
+import thumbnail1 from "@/assets/images-1/thumbnail.jpg";
+import small1 from "@/assets/images-1/hero-small.jpg";
+import large1 from "@/assets/images-1/hero-large.jpg";
+import gallery1 from "@/assets/images-1/gallery.jpg";
+import artist1 from "@/assets/images-1/artist.jpg";
+
+import thumbnail2 from "@/assets/images-2/thumbnail.jpg";
+import small2 from "@/assets/images-2/hero-small.jpg";
+import large2 from "@/assets/images-2/hero-large.jpg";
+import gallery2 from "@/assets/images-2/gallery.jpg";
+import artist2 from "@/assets/images-2/artist.jpg";
+
+import thumbnail3 from "@/assets/images-3/thumbnail.jpg";
+import small3 from "@/assets/images-3/hero-small.jpg";
+import large3 from "@/assets/images-3/hero-large.jpg";
+import gallery3 from "@/assets/images-3/gallery.jpg";
+import artist3 from "@/assets/images-3/artist.jpg";
+
+import thumbnail4 from "@/assets/images-4/thumbnail.jpg";
+import small4 from "@/assets/images-4/hero-small.jpg";
+import large4 from "@/assets/images-4/hero-large.jpg";
+import gallery4 from "@/assets/images-4/gallery.jpg";
+import artist4 from "@/assets/images-4/artist.jpg";
+
+import thumbnail5 from "@/assets/images-5/thumbnail.jpg";
+import small5 from "@/assets/images-5/hero-small.jpg";
+import large5 from "@/assets/images-5/hero-large.jpg";
+import gallery5 from "@/assets/images-5/gallery.jpg";
+import artist5 from "@/assets/images-5/artist.jpg";
+
+import thumbnail6 from "@/assets/images-6/thumbnail.jpg";
+import small6 from "@/assets/images-6/hero-small.jpg";
+import large6 from "@/assets/images-6/hero-large.jpg";
+import gallery6 from "@/assets/images-6/gallery.jpg";
+import artist6 from "@/assets/images-6/artist.jpg";
+
+import thumbnail7 from "@/assets/images-7/thumbnail.jpg";
+import small7 from "@/assets/images-7/hero-small.jpg";
+import large7 from "@/assets/images-7/hero-large.jpg";
+import gallery7 from "@/assets/images-7/gallery.jpg";
+import artist7 from "@/assets/images-7/artist.jpg";
+
+import thumbnail8 from "@/assets/images-8/thumbnail.jpg";
+import small8 from "@/assets/images-8/hero-small.jpg";
+import large8 from "@/assets/images-8/hero-large.jpg";
+import gallery8 from "@/assets/images-8/gallery.jpg";
+import artist8 from "@/assets/images-5/artist.jpg";
+
+import thumbnail9 from "@/assets/images-9/thumbnail.jpg";
+import small9 from "@/assets/images-9/hero-small.jpg";
+import large9 from "@/assets/images-9/hero-large.jpg";
+import gallery9 from "@/assets/images-9/gallery.jpg";
+import artist9 from "@/assets/images-9/artist.jpg";
+
+import thumbnail10 from "@/assets/images-10/thumbnail.jpg";
+import small10 from "@/assets/images-10/hero-small.jpg";
+import large10 from "@/assets/images-10/hero-large.jpg";
+import gallery10 from "@/assets/images-10/gallery.jpg";
+import artist10 from "@/assets/images-10/artist.jpg";
+
+import thumbnail11 from "@/assets/images-11/thumbnail.jpg";
+import small11 from "@/assets/images-11/hero-small.jpg";
+import large11 from "@/assets/images-11/hero-large.jpg";
+import gallery11 from "@/assets/images-11/gallery.jpg";
+import artist11 from "@/assets/images-11/artist.jpg";
+
+import thumbnail12 from "@/assets/images-12/thumbnail.jpg";
+import small12 from "@/assets/images-12/hero-small.jpg";
+import large12 from "@/assets/images-12/hero-large.jpg";
+import gallery12 from "@/assets/images-12/gallery.jpg";
+import artist12 from "@/assets/images-12/artist.jpg";
+
+import thumbnail13 from "@/assets/images-13/thumbnail.jpg";
+import small13 from "@/assets/images-13/hero-small.jpg";
+import large13 from "@/assets/images-13/hero-large.jpg";
+import gallery13 from "@/assets/images-13/gallery.jpg";
+import artist13 from "@/assets/images-13/artist.jpg";
+
+import thumbnail14 from "@/assets/images-14/thumbnail.jpg";
+import small14 from "@/assets/images-14/hero-small.jpg";
+import large14 from "@/assets/images-14/hero-large.jpg";
+import gallery14 from "@/assets/images-14/gallery.jpg";
+import artist14 from "@/assets/images-14/artist.jpg";
+
+import thumbnail15 from "@/assets/images-15/thumbnail.jpg";
+import small15 from "@/assets/images-15/hero-small.jpg";
+import large15 from "@/assets/images-15/hero-large.jpg";
+import gallery15 from "@/assets/images-15/gallery.jpg";
+import artist15 from "@/assets/images-15/artist.jpg";
+
 export interface Painting {
   name: string;
   order: number[];
@@ -32,11 +122,11 @@ export const paintings: Painting[] = [
     artist: "Vincent Van Gogh",
     style: "max-w-360 max-h-238",
     images: {
-      thumbnail: "../assets/images-1/thumbnail.jpg",
-      small: "../assets/images-1/hero-small.jpg",
-      large: "../assets/images-1/hero-large.jpg",
-      gallery: "../assets/images-1/gallery.jpg",
-      artist: "../assets/images-1/artist.jpg",
+      thumbnail: thumbnail1,
+      small: small1,
+      large: large1,
+      gallery: gallery1,
+      artist: artist1,
     },
   },
   {
@@ -49,11 +139,11 @@ export const paintings: Painting[] = [
     artist: "Rembrandt",
     style: "max-w-380 max-h-302",
     images: {
-      thumbnail: "../assets/images-2/thumbnail.jpg",
-      small: "../assets/images-2/hero-small.jpg",
-      large: "../assets/images-2/hero-large.jpg",
-      gallery: "../assets/images-2/gallery.jpg",
-      artist: "../assets/images-2/artist.jpg",
+      thumbnail: thumbnail2,
+      small: small2,
+      large: large2,
+      gallery: gallery2,
+      artist: artist2,
     },
   },
   {
@@ -66,11 +156,11 @@ export const paintings: Painting[] = [
     artist: "Leonardo da Vinci",
     style: "max-h-238",
     images: {
-      thumbnail: "../assets/images-3/thumbnail.jpg",
-      small: "../assets/images-3/hero-small.jpg",
-      large: "../assets/images-3/hero-large.jpg",
-      gallery: "../assets/images-3/gallery.jpg",
-      artist: "../assets/images-3/artist.jpg",
+      thumbnail: thumbnail3,
+      small: small3,
+      large: large3,
+      gallery: gallery3,
+      artist: artist3,
     },
   },
   {
@@ -83,11 +173,11 @@ export const paintings: Painting[] = [
     artist: "Paul Cézanne",
     style: "max-h-238",
     images: {
-      thumbnail: "../assets/images-4/thumbnail.jpg",
-      small: "../assets/images-4/hero-small.jpg",
-      large: "../assets/images-4/hero-large.jpg",
-      gallery: "../assets/images-4/gallery.jpg",
-      artist: "../assets/images-4/artist.jpg",
+      thumbnail: thumbnail4,
+      small: small4,
+      large: large4,
+      gallery: gallery4,
+      artist: artist4,
     },
   },
   {
@@ -100,11 +190,11 @@ export const paintings: Painting[] = [
     artist: "Johannes Vermeer",
     style: "max-w-360 max-h-302",
     images: {
-      thumbnail: "../assets/images-5/thumbnail.jpg",
-      small: "../assets/images-5/hero-small.jpg",
-      large: "../assets/images-5/hero-large.jpg",
-      gallery: "../assets/images-5/gallery.jpg",
-      artist: "../assets/images-5/artist.jpg",
+      thumbnail: thumbnail5,
+      small: small5,
+      large: large5,
+      gallery: gallery5,
+      artist: artist5,
     },
   },
   {
@@ -117,11 +207,11 @@ export const paintings: Painting[] = [
     artist: "Hokusai",
     style: "max-h-302",
     images: {
-      thumbnail: "../assets/images-6/thumbnail.jpg",
-      small: "../assets/images-6/hero-small.jpg",
-      large: "../assets/images-6/hero-large.jpg",
-      gallery: "../assets/images-6/gallery.jpg",
-      artist: "../assets/images-6/artist.jpg",
+      thumbnail: thumbnail6,
+      small: small6,
+      large: large6,
+      gallery: gallery6,
+      artist: artist6,
     },
   },
   {
@@ -134,11 +224,11 @@ export const paintings: Painting[] = [
     artist: "Vincent Van Gogh",
     style: "max-h-238",
     images: {
-      thumbnail: "../assets/images-7/thumbnail.jpg",
-      small: "../assets/images-7/hero-small.jpg",
-      large: "../assets/images-7/hero-large.jpg",
-      gallery: "../assets/images-7/gallery.jpg",
-      artist: "../assets/images-7/artist.jpg",
+      thumbnail: thumbnail7,
+      small: small7,
+      large: large7,
+      gallery: gallery7,
+      artist: artist7,
     },
   },
   {
@@ -151,11 +241,11 @@ export const paintings: Painting[] = [
     artist: "Jan van Eyck",
     style: "max-h-238",
     images: {
-      thumbnail: "../assets/images-8/thumbnail.jpg",
-      small: "../assets/images-8/hero-small.jpg",
-      large: "../assets/images-8/hero-large.jpg",
-      gallery: "../assets/images-8/gallery.jpg",
-      artist: "../assets/images-8/artist.jpg",
+      thumbnail: thumbnail8,
+      small: small8,
+      large: large8,
+      gallery: gallery8,
+      artist: artist8,
     },
   },
   {
@@ -168,11 +258,11 @@ export const paintings: Painting[] = [
     artist: "Pablo Picasso",
     style: "max-w-360 max-h-174",
     images: {
-      thumbnail: "../assets/images-9/thumbnail.jpg",
-      small: "../assets/images-9/hero-small.jpg",
-      large: "../assets/images-9/hero-large.jpg",
-      gallery: "../assets/images-9/gallery.jpg",
-      artist: "../assets/images-9/artist.jpg",
+      thumbnail: thumbnail9,
+      small: small9,
+      large: large9,
+      gallery: gallery9,
+      artist: artist9,
     },
   },
   {
@@ -185,11 +275,11 @@ export const paintings: Painting[] = [
     artist: "Vincent Van Gogh",
     style: "max-h-238",
     images: {
-      thumbnail: "../assets/images-10/thumbnail.jpg",
-      small: "../assets/images-10/hero-small.jpg",
-      large: "../assets/images-10/hero-large.jpg",
-      gallery: "../assets/images-10/gallery.jpg",
-      artist: "../assets/images-10/artist.jpg",
+      thumbnail: thumbnail10,
+      small: small10,
+      large: large10,
+      gallery: gallery10,
+      artist: artist10,
     },
   },
   {
@@ -202,11 +292,11 @@ export const paintings: Painting[] = [
     artist: "Leonardo da Vinci",
     style: "max-w-310 max-h-238",
     images: {
-      thumbnail: "../assets/images-11/thumbnail.jpg",
-      small: "../assets/images-11/hero-small.jpg",
-      large: "../assets/images-11/hero-large.jpg",
-      gallery: "../assets/images-11/gallery.jpg",
-      artist: "../assets/images-11/artist.jpg",
+      thumbnail: thumbnail11,
+      small: small11,
+      large: large11,
+      gallery: gallery11,
+      artist: artist11,
     },
   },
   {
@@ -220,11 +310,11 @@ export const paintings: Painting[] = [
     artist: "Artemisia Gentileschi",
     style: "max-w-396 max-h-238",
     images: {
-      thumbnail: "../assets/images-12/thumbnail.jpg",
-      small: "../assets/images-12/hero-small.jpg",
-      large: "../assets/images-12/hero-large.jpg",
-      gallery: "../assets/images-12/gallery.jpg",
-      artist: "../assets/images-12/artist.jpg",
+      thumbnail: thumbnail12,
+      small: small12,
+      large: large12,
+      gallery: gallery12,
+      artist: artist12,
     },
   },
   {
@@ -237,11 +327,11 @@ export const paintings: Painting[] = [
     artist: "Henri Rousseau",
     style: "max-w-350 max-h-302",
     images: {
-      thumbnail: "../assets/images-13/thumbnail.jpg",
-      small: "../assets/images-13/hero-small.jpg",
-      large: "../assets/images-13/hero-large.jpg",
-      gallery: "../assets/images-13/gallery.jpg",
-      artist: "../assets/images-13/artist.jpg",
+      thumbnail: thumbnail13,
+      small: small13,
+      large: large13,
+      gallery: gallery13,
+      artist: artist13,
     },
   },
   {
@@ -254,11 +344,11 @@ export const paintings: Painting[] = [
     artist: "Paul Cézanne",
     style: "max-w-450 max-h-238",
     images: {
-      thumbnail: "../assets/images-14/thumbnail.jpg",
-      small: "../assets/images-14/hero-small.jpg",
-      large: "../assets/images-14/hero-large.jpg",
-      gallery: "../assets/images-14/gallery.jpg",
-      artist: "../assets/images-14/artist.jpg",
+      thumbnail: thumbnail14,
+      small: small14,
+      large: large14,
+      gallery: gallery14,
+      artist: artist14,
     },
   },
   {
@@ -271,11 +361,11 @@ export const paintings: Painting[] = [
     artist: "Jean-Honoré Fragonard",
     style: "max-h-174",
     images: {
-      thumbnail: "../assets/images-15/thumbnail.jpg",
-      small: "../assets/images-15/hero-small.jpg",
-      large: "../assets/images-15/hero-large.jpg",
-      gallery: "../assets/images-15/gallery.jpg",
-      artist: "../assets/images-15/artist.jpg",
+      thumbnail: thumbnail15,
+      small: small15,
+      large: large15,
+      gallery: gallery15,
+      artist: artist15,
     },
   },
 ];
