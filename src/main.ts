@@ -10,8 +10,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import LinkedInIcon from "@icons/LinkedInIcon.vue";
 import GithubIcon from "@icons/GithubIcon.vue";
 import FrontendMentorIcon from "@icons/FrontendMentorIcon.vue";
-import "vue-skeletor/dist/vue-skeletor.css";
-import { Skeletor } from "vue-skeletor";
 
 const router = createRouter({
   history: createWebHistory(),
