@@ -1,14 +1,12 @@
 <script lang="ts" setup>
+import { loadImg } from "@composables/app";
+
 defineProps({
   src: String,
   alt: String,
   title: String,
   artist: String,
 });
-
-const loadImg = (url: string = "") => {
-  return new URL(url, import.meta.url).href;
-};
 </script>
 
 <template>

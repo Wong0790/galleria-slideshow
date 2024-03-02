@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { loadImg } from "@composables/app";
+
 defineEmits(["closeFullSizeImage"]);
 defineProps({
   name: String,
@@ -18,7 +20,7 @@ defineProps({
           Close
         </button>
         <img
-          :src="image"
+          :src="loadImg(image)"
           :alt="`${name} painting`"
           width="auto"
           height="auto"

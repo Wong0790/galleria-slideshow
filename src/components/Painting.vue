@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { paintings } from "@data/app-data";
+import { loadImg } from "@composables/app";
 import { useRoute, useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import FullSizeImage from "./FullSizeImage.vue";
@@ -11,7 +12,6 @@ const router = useRouter();
 const currentRoute = useRoute();
 
 const show = ref(false);
-const imagesLoaded = ref(false);
 const el = ref<HTMLElement | null>(null);
 const title = ref<HTMLElement | null>(null);
 
@@ -54,7 +54,7 @@ const changeSlide = (index: number) => {
 </script>
 
 <template>
-  <div class="main-container" style="padding-bottom: 0" v-if="imagesLoaded">
+  <div class="main-container" style="padding-bottom: 0">
     <header>
       <LogoIcon />
       <button class="btn btn1" @click="stopSlideshow = true">
@@ -79,7 +79,7 @@ const changeSlide = (index: number) => {
           </div>
         </div>
         <img
-          :src="item?.images?.artist"
+          :src="loadImg(item?.images?.artist)"
           :alt="`${item?.artist} picture`"
           :width="isSmaller ? '64' : '128'"
           :height="isSmaller ? '64' : '128'"

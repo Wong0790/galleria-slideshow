@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { loadImg } from "@composables/app";
+
 defineEmits(["openFullSizeImage"]);
 defineProps({
   name: String,
@@ -10,9 +12,9 @@ defineProps({
 <template>
   <div>
     <picture>
-      <source :srcset="imageSmall" media="(max-width: 720px)" />
+      <source :srcset="loadImg(imageSmall)" media="(max-width: 720px)" />
       <img
-        :src="imageLarge"
+        :src="loadImg(imageLarge)"
         :alt="`${name} painting`"
         width="475"
         height="560"

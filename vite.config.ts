@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  assetsInclude: ["images"],
+  /*assetsInclude: ["assets"],*/
   plugins: [vue()],
   server: {
     port: 3000,
@@ -15,6 +15,7 @@ export default defineConfig({
       "@components": "/src/components",
       "@icons": "/src/components/icons",
       "@data": "/src/data",
+      "@composables": "/src/composables",
     },
   },
 });
