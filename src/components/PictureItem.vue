@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { loadImg } from "@composables/app";
-
 defineEmits(["openFullSizeImage"]);
 defineProps({
   name: String,
