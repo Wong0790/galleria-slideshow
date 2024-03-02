@@ -5,11 +5,15 @@ defineProps({
   title: String,
   artist: String,
 });
+
+const loadImg = (url: string = "") => {
+  return new URL(url, import.meta.url).href;
+};
 </script>
 
 <template>
   <div class="card">
-    <img :src="src" :alt="alt" />
+    <img :src="loadImg(src)" :alt="alt" />
     <div class="foreground">
       <div class="content-container">
         <h2>{{ title }}</h2>

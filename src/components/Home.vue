@@ -1,13 +1,12 @@
 <script lang="ts" setup>
-import { onMounted, ref, computed } from "vue";
+import { ref, computed } from "vue";
 import GalleryCard from "@components/GalleryCard.vue";
 import SocialItem from "@components/SocialItem.vue";
-import { loadImages, paintings, Painting, socials } from "@data/app-data";
+import { paintings, Painting, socials } from "@data/app-data";
 import { useWindowSize } from "@vueuse/core";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const imagesLoaded = ref(false);
 const { width } = useWindowSize();
 const paintingsCopy = ref<Painting[]>([...paintings]);
 
@@ -30,12 +29,6 @@ const startSlideShow = () => {
 const handlePaintingClick = (name: string) => {
   router.push({ name: "Painting", params: { name } });
 };
-
-onMounted(async () => {
-  await loadImages();
-  imagesLoaded.value = true;
-  localStorage.setItem("once", "1");
-});
 </script>
 
 <template>
@@ -44,13 +37,7 @@ onMounted(async () => {
       <LogoIcon />
       <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
     </header>
-    <div
-      v-if="!imagesLoaded"
-      class="flex flex-wrap gap-10 justify-center mt-16"
-    >
-      <Skeletor width="310" height="250" v-for="index in 4" :key="index" />
-    </div>
-    <section class="gallery" v-else>
+    <section class="gallery">
       <GalleryCard
         v-for="(painting, index) in arrangedPaintings"
         :key="index"

@@ -31,6 +31,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Starry_Night",
     artist: "Vincent Van Gogh",
     style: "max-w-360 max-h-238",
+    images: {
+      thumbnail: "../assets/images-1/thumbnail.jpg",
+      small: "../assets/images-1/hero-small.jpg",
+      large: "../assets/images-1/hero-large.jpg",
+      gallery: "../assets/images-1/gallery.jpg",
+      artist: "../assets/images-1/artist.jpg",
+    },
   },
   {
     name: "The Storm on the Sea of Galilee",
@@ -41,6 +48,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
     artist: "Rembrandt",
     style: "max-w-380 max-h-302",
+    images: {
+      thumbnail: "../assets/images-2/thumbnail.jpg",
+      small: "../assets/images-2/hero-small.jpg",
+      large: "../assets/images-2/hero-large.jpg",
+      gallery: "../assets/images-2/gallery.jpg",
+      artist: "../assets/images-2/artist.jpg",
+    },
   },
   {
     name: "Lady with an Ermine",
@@ -51,6 +65,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Lady_with_an_Ermine",
     artist: "Leonardo da Vinci",
     style: "max-h-238",
+    images: {
+      thumbnail: "../assets/images-3/thumbnail.jpg",
+      small: "../assets/images-3/hero-small.jpg",
+      large: "../assets/images-3/hero-large.jpg",
+      gallery: "../assets/images-3/gallery.jpg",
+      artist: "../assets/images-3/artist.jpg",
+    },
   },
   {
     name: "The Boy in the Red Vest",
@@ -61,6 +82,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
     artist: "Paul Cézanne",
     style: "max-h-238",
+    images: {
+      thumbnail: "../assets/images-4/thumbnail.jpg",
+      small: "../assets/images-4/hero-small.jpg",
+      large: "../assets/images-4/hero-large.jpg",
+      gallery: "../assets/images-4/gallery.jpg",
+      artist: "../assets/images-4/artist.jpg",
+    },
   },
   {
     name: "Girl with a Pearl Earring",
@@ -71,6 +99,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring",
     artist: "Johannes Vermeer",
     style: "max-w-360 max-h-302",
+    images: {
+      thumbnail: "../assets/images-5/thumbnail.jpg",
+      small: "../assets/images-5/hero-small.jpg",
+      large: "../assets/images-5/hero-large.jpg",
+      gallery: "../assets/images-5/gallery.jpg",
+      artist: "../assets/images-5/artist.jpg",
+    },
   },
   {
     name: "The Great Wave off Kanagawa",
@@ -81,6 +116,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
     artist: "Hokusai",
     style: "max-h-302",
+    images: {
+      thumbnail: "../assets/images-6/thumbnail.jpg",
+      small: "../assets/images-6/hero-small.jpg",
+      large: "../assets/images-6/hero-large.jpg",
+      gallery: "../assets/images-6/gallery.jpg",
+      artist: "../assets/images-6/artist.jpg",
+    },
   },
   {
     name: "The Night Café",
@@ -91,6 +133,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9",
     artist: "Vincent Van Gogh",
     style: "max-h-238",
+    images: {
+      thumbnail: "../assets/images-7/thumbnail.jpg",
+      small: "../assets/images-7/hero-small.jpg",
+      large: "../assets/images-7/hero-large.jpg",
+      gallery: "../assets/images-7/gallery.jpg",
+      artist: "../assets/images-7/artist.jpg",
+    },
   },
   {
     name: "Arnolfini Portrait",
@@ -101,6 +150,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
     artist: "Jan van Eyck",
     style: "max-h-238",
+    images: {
+      thumbnail: "../assets/images-8/thumbnail.jpg",
+      small: "../assets/images-8/hero-small.jpg",
+      large: "../assets/images-8/hero-large.jpg",
+      gallery: "../assets/images-8/gallery.jpg",
+      artist: "../assets/images-8/artist.jpg",
+    },
   },
   {
     name: "Guernica",
@@ -111,6 +167,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
     artist: "Pablo Picasso",
     style: "max-w-360 max-h-174",
+    images: {
+      thumbnail: "../assets/images-9/thumbnail.jpg",
+      small: "../assets/images-9/hero-small.jpg",
+      large: "../assets/images-9/hero-large.jpg",
+      gallery: "../assets/images-9/gallery.jpg",
+      artist: "../assets/images-9/artist.jpg",
+    },
   },
   {
     name: "Van Gogh self-portrait",
@@ -121,6 +184,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
     artist: "Vincent Van Gogh",
     style: "max-h-238",
+    images: {
+      thumbnail: "../assets/images-10/thumbnail.jpg",
+      small: "../assets/images-10/hero-small.jpg",
+      large: "../assets/images-10/hero-large.jpg",
+      gallery: "../assets/images-10/gallery.jpg",
+      artist: "../assets/images-10/artist.jpg",
+    },
   },
   {
     name: "Mona Lisa",
@@ -131,6 +201,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/Mona_Lisa",
     artist: "Leonardo da Vinci",
     style: "max-w-310 max-h-238",
+    images: {
+      thumbnail: "../assets/images-11/thumbnail.jpg",
+      small: "../assets/images-11/hero-small.jpg",
+      large: "../assets/images-11/hero-large.jpg",
+      gallery: "../assets/images-11/gallery.jpg",
+      artist: "../assets/images-11/artist.jpg",
+    },
   },
   {
     name: "Penitent Magdalene",
@@ -142,6 +219,13 @@ export const paintings: Painting[] = [
       "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
     artist: "Artemisia Gentileschi",
     style: "max-w-396 max-h-238",
+    images: {
+      thumbnail: "../assets/images-12/thumbnail.jpg",
+      small: "../assets/images-12/hero-small.jpg",
+      large: "../assets/images-12/hero-large.jpg",
+      gallery: "../assets/images-12/gallery.jpg",
+      artist: "../assets/images-12/artist.jpg",
+    },
   },
   {
     name: "The Sleeping Gypsy",
@@ -152,6 +236,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
     artist: "Henri Rousseau",
     style: "max-w-350 max-h-302",
+    images: {
+      thumbnail: "../assets/images-13/thumbnail.jpg",
+      small: "../assets/images-13/hero-small.jpg",
+      large: "../assets/images-13/hero-large.jpg",
+      gallery: "../assets/images-13/gallery.jpg",
+      artist: "../assets/images-13/artist.jpg",
+    },
   },
   {
     name: "The Basket of Apples",
@@ -162,6 +253,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
     artist: "Paul Cézanne",
     style: "max-w-450 max-h-238",
+    images: {
+      thumbnail: "../assets/images-14/thumbnail.jpg",
+      small: "../assets/images-14/hero-small.jpg",
+      large: "../assets/images-14/hero-large.jpg",
+      gallery: "../assets/images-14/gallery.jpg",
+      artist: "../assets/images-14/artist.jpg",
+    },
   },
   {
     name: "The Swing",
@@ -172,6 +270,13 @@ export const paintings: Painting[] = [
     source: "https://en.wikipedia.org/wiki/The_Swing_(Fragonard)",
     artist: "Jean-Honoré Fragonard",
     style: "max-h-174",
+    images: {
+      thumbnail: "../assets/images-15/thumbnail.jpg",
+      small: "../assets/images-15/hero-small.jpg",
+      large: "../assets/images-15/hero-large.jpg",
+      gallery: "../assets/images-15/gallery.jpg",
+      artist: "../assets/images-15/artist.jpg",
+    },
   },
 ];
 
@@ -192,35 +297,3 @@ export const socials: Social[] = [
     aria: "Anneris E. Wong Jorge Frowntend Mentor profile",
   },
 ];
-
-async function importImages(index: number): Promise<{
-  thumbnail: string;
-  small: string;
-  large: string;
-  gallery: string;
-  artist: string;
-}> {
-  const cont = index + 1;
-  const [thumbnail, small, large, gallery, artist] = await Promise.all([
-    import(`../assets/images-${cont}/thumbnail.jpg`),
-    import(`../assets/images-${cont}/hero-small.jpg`),
-    import(`../assets/images-${cont}/hero-large.jpg`),
-    import(`../assets/images-${cont}/gallery.jpg`),
-    import(`../assets/images-${cont}/artist.jpg`),
-  ]);
-
-  return {
-    thumbnail: thumbnail.default,
-    small: small.default,
-    large: large.default,
-    gallery: gallery.default,
-    artist: artist.default,
-  };
-}
-
-export async function loadImages() {
-  for (let i = 0; i < 15; i++) {
-    const images = await importImages(i);
-    paintings[i].images = images;
-  }
-}

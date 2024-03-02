@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { onMounted, ref, computed } from "vue";
-import { loadImages, paintings } from "@data/app-data";
+import { ref, computed } from "vue";
+import { paintings } from "@data/app-data";
 import { useRoute, useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import FullSizeImage from "./FullSizeImage.vue";
@@ -51,16 +51,6 @@ const changeSlide = (index: number) => {
     });
   }
 };
-
-onMounted(async () => {
-  if (!item.hasOwnProperty("images")) {
-    await loadImages();
-    imagesLoaded.value = true;
-    localStorage.setItem("once", "1");
-  } else {
-    imagesLoaded.value = true;
-  }
-});
 </script>
 
 <template>
