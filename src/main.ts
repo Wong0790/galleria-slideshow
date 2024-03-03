@@ -36,7 +36,6 @@ app
   .component("LogoIcon", LogoIcon)
   .component("LinkedInIcon", LinkedInIcon)
   .component("GithubIcon", GithubIcon)
-  .component("FrontendMentorIcon", FrontendMentorIcon)
-  .component(Skeletor.name, Skeletor);
+  .component("FrontendMentorIcon", FrontendMentorIcon);
 
 app.use(router).mount("#app");
