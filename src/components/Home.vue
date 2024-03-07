@@ -58,14 +58,7 @@ const handlePaintingClick = (name: string) => {
           </li>
         </ul>
         <span class="font-semibold text-black">
-          &copy;2024
-          <a
-            href="https://wong0790-dev-profolio.netlify.app"
-            target="_blank"
-            class="hover:text-dark-gray"
-          >
-            Anneris E. Wong Jorge
-          </a>
+          &copy;2024 Anneris E. Wong Jorge
         </span>
       </div>
     </footer>
