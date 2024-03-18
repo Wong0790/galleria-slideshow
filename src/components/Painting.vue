@@ -73,7 +73,7 @@ const changeSlide = (index: number) => {
               hideScroll();
             "
           />
-          <div class="picture-title" :class="item?.style" ref="title">
+          <div class="picture-title" :class="item?.class" ref="title">
             <h1>{{ item?.name }}</h1>
             <p class="subhead">{{ item?.artist }}</p>
           </div>

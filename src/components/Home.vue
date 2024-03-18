@@ -1,26 +1,10 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-import GalleryCard from "@components/GalleryCard.vue";
 import SocialItem from "@components/SocialItem.vue";
-import { paintings, Painting, socials } from "@data/app-data";
-import { useWindowSize } from "@vueuse/core";
+import { paintings, socials } from "@data/app-data";
 import { useRouter } from "vue-router";
+import GalleryImage from "./GalleryImage.vue";
 
 const router = useRouter();
-const { width } = useWindowSize();
-const paintingsCopy = ref<Painting[]>([...paintings]);
-
-const index = computed(() =>
-  width.value <= 720 ? 2 : width.value <= 1440 ? 1 : 0
-);
-
-const arrangedPaintings = computed(() =>
-  paintingsCopy.value.sort((a, b) => {
-    const orderA = a.order[index.value];
-    const orderB = b.order[index.value];
-    return orderA < orderB ? -1 : 1;
-  })
-);
 
 const startSlideShow = () => {
   router.push({ name: "Painting", params: { name: "Starry Night" } });
@@ -37,9 +21,9 @@ const handlePaintingClick = (name: string) => {
       <LogoIcon />
       <button class="btn btn1" @click="startSlideShow">Start slideshow</button>
     </header>
-    <section class="gallery">
-      <GalleryCard
-        v-for="(painting, index) in arrangedPaintings"
+    <section class="gallery mt-6 sm:mt-10">
+      <GalleryImage
+        v-for="(painting, index) in paintings"
         :key="index"
         :src="painting?.images?.thumbnail"
         :alt="painting.name"
