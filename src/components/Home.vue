@@ -32,8 +32,8 @@ const handlePaintingClick = (name: string) => {
         @click="handlePaintingClick(painting.name)"
       />
     </section>
-    <footer class="mt-4 lg:mt-10">
-      <div class="text-center mt-16">
+    <footer>
+      <div class="text-center mt-4">
         <ul class="social-icons">
           <li v-for="social in socials" :key="social.name" class="group">
             <SocialItem :url="social.url" :aria="social.aria">
